@@ -1,0 +1,16 @@
+wandb
+__pycache__
+.vscode
+notebooks
+results
+*.ipynb_checkpoints
+eval_results
+tests
+.DS_Store
+gradio.sh
+data_example
+
+# Local inference weights, offload files, and root-level input photos.
+/models/
+/offload/
+/*.jpg

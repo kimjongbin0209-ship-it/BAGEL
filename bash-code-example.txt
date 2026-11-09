@@ -1,0 +1,17 @@
+# From the repository root on the GPU host, run bash bash-code-example.txt.
+set -e
+
+# Generate an image from text.
+python inference.py --task t2i \
+  --prompt "A bagel on a wooden table" \
+  --output results/generated.png
+
+# Edit an image.
+python inference.py --task edit --image test_images/octupusy.jpg \
+  --prompt "Change the background to a deep blue ocean." \
+  --output results/edited.png
+
+# Ask a question about an image.
+python inference.py --task understand --image test_images/octupusy.jpg \
+  --prompt "What is shown in this image?" \
+  --output results/description.txt
